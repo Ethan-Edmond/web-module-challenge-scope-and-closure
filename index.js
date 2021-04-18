@@ -30,7 +30,7 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   1. What is the difference between counter1 and counter2?
 
   counter2 leaves the count variable in the global scope, counter1 "encloses" the count variable
-  keeping it within the scope of the function
+  keeping it within the scope of the function.
   
   2. Which of the two uses a closure? How can you tell?
 
@@ -75,7 +75,7 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(){
-  return Math.floor(Math.random() * 2);
+  return Math.floor(Math.random() * 3);
 }
 
 
@@ -93,18 +93,30 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inningFunc, inningNum){
+  let scoreObj = {Home: 0, Away: 0};
+  for (let i = 0; i < inningNum; i++){
+    scoreObj.Away += inningFunc();
+    scoreObj.Home += inningFunc();
+  }
+  return scoreObj;
 }
+
+console.log(finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inningFunc) {
+  let scoreObj = {Home: 0, Away: 0};
+  scoreObj.Home += inningFunc();
+  scoreObj.Away += inningFunc();
+  return scoreObj;
 }
+
+console.log(getInningScore(inning));
 
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
@@ -148,8 +160,10 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningFunc, inningFunc, inningsNum) {
+  let scoreAry = [];
+
+
 }
 
 
