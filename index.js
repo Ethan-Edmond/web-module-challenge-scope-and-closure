@@ -114,6 +114,11 @@ function getInningScore(inningFunc) {
   scoreObj.Home += inningFunc();
   scoreObj.Away += inningFunc();
   return scoreObj;
+
+  // return {
+  //   Home: inningFunc(),
+  //   Away: inningFunc()
+  // };
 }
 
 console.log(getInningScore(inning));
