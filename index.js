@@ -40,9 +40,9 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
      counter2 be better?  
 
      counter1 would be better if you want a bunch of different counter functions or if we don't want to leave the count variable in the global scope.
-     counter2 would be better if we want to use the count variable in the global scope for other stuff.
+     counter2 would be better if we want to use the count variable in the global scope for other stuff. or if we just wanted a function instead of a function maker.
 
-     oh wow, you can use a closure returning multiple functions, so that global scope argument is a little wrong.
+     I have just found that you can use a closure returning multiple functions, so that global scope argument is a little wrong.
 */
 
 // counter1 code
