@@ -95,6 +95,15 @@ addSix(21); // returns 27
 
 2. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
 
+Functional programming divides our code into functions and object oriented
+programming organizes our code into an object or set of objects. So,
+mathematically, they're kind of just different notations (f(x, y) vs. x.f(y)).
+Functional is supposed to be stateless, but this kind of breaks down when we try
+to get the computer to do stuff. There is no stigma for state in object oriented
+programming and object oriented programming is often better at keeping track of
+data. I would say that functional is better for complicated transformations and
+object oriented is better for complicated data structures.
+
 ## Resources
 
 📚 [Scope and Closures Guide](https://css-tricks.com/javascript-scope-closures/)
