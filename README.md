@@ -43,6 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+closure is when a function has to find a variable outside the scope of the function.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +67,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+Name is only available due to closure. Name is used in the returned function of personalDice, but it only has access to this due to it being in the scope of personalDice.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The name variable is enclosed by dansRoll, and can't change from "Dan". Each invocation creates a new newRoll which is a random integer from 0 to 5;
+
 c. What is the lexical scope of `newRoll`? 
+
+The lexical scope of newRoll is the block inside of personalDice's returned function. It is not available anywhere else.
 
 
 ### Task 3 - Stretch Goals
